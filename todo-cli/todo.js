@@ -16,7 +16,7 @@ const todoList = () => {
 
   const dueToday = () => {
     const today = new Date().toISOString().split("T")[0];
-    return all.filter((item) => item.dueDate && item.dueDate.toLowerCase() === today.toLowerCase());
+    return all.filter((item) => item.dueDate && new Date(item.dueDate).toISOString().split("T")[0] === today);
   };
 
   const dueLater = () => {
@@ -29,7 +29,7 @@ const todoList = () => {
 
     return list
       .map((item) => {
-        const dueText = item.dueDate && item.dueDate.toLowerCase() !== today.toLowerCase() ? ` ${item.dueDate}` : "";
+        const dueText = item.dueDate && new Date(item.dueDate).toISOString().split("T")[0] !== today ? ` ${item.dueDate}` : "";
         const completionStatus = item.completed ? "[x]" : "[ ]";
         return `${completionStatus} ${item.title}${dueText}`;
       })
