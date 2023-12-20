@@ -50,11 +50,11 @@ const todoList = () => {
 // Example usage and output
 const myTodoList = todoList();
 
-myTodoList.add({ title: 'Submit assignment', dueDate: '2022-07-21' });
+myTodoList.add({ title: 'Submit assignment', dueDate: '2023-12-19' });
 myTodoList.add({ title: 'Pay rent', dueDate: new Date().toISOString().split("T")[0] });
-myTodoList.add({ title: 'Service vehicle' });
-myTodoList.add({ title: 'File taxes', dueDate: '2022-07-23' });
-myTodoList.add({ title: 'Pay electric bill', dueDate: '2022-07-23' });
+myTodoList.add({ title: 'Service Vehicle' });
+myTodoList.add({ title: 'File taxes', dueDate: '2023-12-21' });
+myTodoList.add({ title: 'Pay electric bill', dueDate: '2023-12-21' });
 
 myTodoList.markAsComplete(1);
 
